@@ -73,10 +73,10 @@ void turnRightMiddleRobot(){
   setMode(1, 'B');
 }
 void turnRightMiddleRobot(int speed){
-  setVelocity(0, speed);
-  setVelocity(1, speed);  
   setMode(0, 'F');
   setMode(1, 'B');
+  setVelocity(0, speed);
+  setVelocity(1, speed);  
 }
 // 180° no sentido anti-horario
 void turnLeftMiddleRobot(){
@@ -88,4 +88,18 @@ void turnLeftMiddleRobot(int speed){
   setMode(1, 'F');
   setVelocity(0, speed);
   setVelocity(1, speed);
+}
+
+void clockwise(int speed){
+  setMode(0, 'F');
+  setMode(1, 'F');
+  setVelocity(0, (speed * 15)/10);
+  setVelocity(1, speed);
+}
+
+void counterClockwise(int speed){
+  setMode(0, 'F');
+  setMode(1, 'F');
+  setVelocity(0, speed);
+  setVelocity(1, (speed * 15)/10);
 }
